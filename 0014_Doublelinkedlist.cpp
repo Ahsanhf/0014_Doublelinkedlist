@@ -18,3 +18,8 @@ void addNode()
 	cout << "\nEnter the name of the student: ";
 	cin >> newNode->noMhs; // Assign value to the data field of the new node
 	cout << "\nEnter the name of the student: ";
+	cin >> newNode->name; // Assign value to the data field of the new node
+
+	//insert the new node in the list
+	if (START == NULL || newNode->noMhs <= START->noMhs)
+	{ // Step 2: insert the new node at the beginning
