@@ -44,3 +44,9 @@ void addNode()
 		Node* previous = current->next; //step 1.b: previous node is NULL intially
 
 		while (current != NULL && current->noMhs < newNode->noMhs)
+		{                              //step 1.c:traverse the list to find the correct position
+			previous = current;       // step 1.d: move the previous to the current node
+			current = current->next; //step1.e: move the current to the next node
+		}
+		newNode->next = current; // step 4: make the next field of the new node point to current.
+		
